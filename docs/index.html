@@ -1,1 +1,196 @@
-repertoire
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabs and Sticky Sections</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css" />
+    <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Masthead -->
+    <div id="masthead">
+        <!-- Begin Menu -->
+
+        <!-- End Menu -->
+        <div id="logo">
+
+            <h1 id="developments" class="ui header">//_Developments</h1>
+            <h1 id="byj" class="ui header">by j.</h1>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <div id="scroll-down" class="ui tiny inverted center aligned header">Scroll Down</div>
+            <div id="scroll-arrow" class="ui center aligned"><i class="ui huge inverted down arrow icon"></i></div>
+        </div>
+    </div>
+
+    <!-- Begin Menu -->
+    <div id="menu" class="ui massive borderless main menu">
+        <div class="ui container">
+            <a href="#masthead" id="dbj" class="ui item">//_DBJ</a>
+            <!-- <a href="#first-tabs" class="ui item">Where I've Been</a>
+            <a href="#second-tabs" class="ui item">Where I'm Going</a>
+            <a href="" class="ui item">What I've Learned Along the Way</a> -->
+        </div>
+    </div>
+    <!-- End Menu -->
+
+    <!-- Begin Content -->
+    <div id="content" class="ui container">
+        <br>
+        <br>
+        <div class="ui centered grid">
+            <div id="intro" class="column">
+                <div class="ui huge red center aligned header">Let us make something beautiful together
+                    <div class="ui sub header">Shall we begin?</div>
+                </div>
+
+                <br>
+            </div>
+        </div>
+
+        <div id="resume" class="ui raised segment">
+            <div class="ui red ribbon label">Quick Resumé</div>
+            <div class="ui huge center aligned header">Joshua A. L. Harrison
+                <div class="ui sub header">also known as "j."</div>
+            </div>
+
+            <div class="ui header big">Education</div>
+            <p>
+                I have obtained a degree in <strong>Information Technology</strong>, with a minor in business for <strong>Roosevelt University</strong> in Chicago, IL.
+                <p> There I learned many engineering concepts such as Object-Oriented Programming in my first language, Java, data structures, database manipulation with SQL, project management, and so on. However, despite formal education, most of my learning
+                    has comes from outside of the class room. Desiring real-world solutions to some of my own problems, I began acquiring the knowledge to create an applications, to which I will get to in a moment.</p>
+            </p>
+        </div>
+
+        <!-- <div class="ui center aligned small images">
+            <img class="ui one wide column image" src="img\logos\skill-badges\HTML5.png" alt="">
+            <img class="ui image" src="img\logos\skill-badges\CSS.png" alt="">
+            <img class="ui image" src="img\logos\skill-badges\javascript.png" alt="">
+            <img class="ui image" src="img\logos\skill-badges\nodejs.png" alt="">
+            <img class="ui image" src="img\logos\skill-badges\MySQL.svg.png" alt="">
+        </div> -->
+
+
+
+    </div>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.js"></script>
+    <script type="text/javascript">
+        // enables tabs to work appropriately
+        $('.menu .item').tab();
+
+
+        setTimeout(function() {
+            $('#developments').transition({
+                animation: 'fade',
+                duration: '2000ms'
+            }).animate({
+                dropShadow: "100px 100px #000"
+            });
+
+            $('#byj').transition({
+                animation: 'fade up',
+                duration: '3000ms'
+            });
+        }, 2000);
+
+
+        // makes the menu sticky
+        $('#menu')
+            .visibility({
+                type: 'fixed'
+                    // ,offset: 15 // give some space from top of screen
+            });
+
+
+        $('#example')
+            .visibility({
+                type: "image",
+                transition: 'fade in',
+                duration: 1000
+            });
+
+
+        // enables smooth scroll for all self-links (ie href = "#id")
+        $(function() {
+            $('a[href*="#"]:not([href="#"])').click(function() {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top - 50
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+
+        // Scroll Down Animations
+
+        // DBJ Appears in Menu
+        $('#developments').visibility({
+            once: false,
+            onBottomPassed: function() {
+                $('#dbj').transition({
+                    animation: 'fade down',
+                    duration: '500ms'
+                });
+            },
+            onBottomPassedReverse: function() {
+                $('#dbj').transition('fade up');
+            }
+        });
+
+
+        // give 5 seconds to see if the masthead is still visible.
+        // if so, it will give them the hint to scroll down
+        setTimeout(function() {
+            $('#masthead').visibility({
+                once: true,
+                onPassing: function() {
+                    $('#scroll-down').transition({
+                        animation: 'fade down',
+                        duration: '500ms'
+                    });
+                    $('#scroll-arrow').transition({
+                        animation: 'fade down',
+                        duration: '500ms'
+                    });
+                }
+            });
+        }, 10000);
+        // scrolling transitions
+        //    $('#masthead')
+        //        .visibility({
+        //            once: false,
+        //            continuous: true,
+        //            onPassing: function(calculations) {
+        //                //  console.log(calculations.percentagePassed)
+        //                var greys = Math.round(calculations.percentagePassed * 255);
+        //
+        //                var newColor = 'rgba(' + greys + ',' + greys + ',' + greys + ', 1)';
+        //                console.log('rgba(' + greys + ',' + greys + ',' + greys + ', 1)');
+        //                $(this)
+        //                    .css('background-color', newColor);
+        //            }
+        //        });
+    </script>
+</body>
+
+</html>

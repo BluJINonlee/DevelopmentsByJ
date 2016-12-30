@@ -1,0 +1,89 @@
+@font-face {
+    font-family: FARRAY;
+    src: url('../fonts/FARRAY.otf') format("opentype");
+}
+#underimage {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    min-height: 100%;
+    min-width: 100%;
+    background-image: url("../img/gif.gif");
+    /*-webkit-filter: blur(5px);
+  /* Chrome, Safari, Opera */
+    /*filter: blur(50px);*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1
+}
+#masthead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    background-image: url("../img/IDE-blurred.gif");
+    background-size: cover;
+    /*background-color: #101018*/
+}
+#masthead .logo {
+    position: relative;
+    padding-top: 15%;
+}
+#developments {
+    visibility: hidden;
+    font-family: FARRAY;
+    font-size: 9vw;
+    color: #fff;
+    -webkit-filter: drop-shadow(20px 20px #000);
+    filter: drop-shadow(20px 20px #000);
+}
+#byj {
+    visibility: hidden;
+    position: relative;
+    right: 100px;
+    font-family: Oswald;
+    font-size: 2vw;
+    text-align: right;
+    text-shadow: 4px 5px #000;
+    color: #fff;
+}
+#dbj {
+    visibility: hidden;
+    font-family: FARRAY;
+}
+
+#scroll-down, #scroll-arrow {
+    visibility: hidden;
+}
+.logo-inverse {
+    font-family: FARRAY;
+    font-size: 5em;
+}
+.skills {
+    /* position: absolute; */
+    align: middle;
+}
+.skills img {
+    width: 100%;
+    min-width: 0;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    margin: 0 auto;
+}
+.center {
+    text-align: center;
+}
+.menu {
+    margin-top: 0px !important;
+}
+.shadow {
+    -webkit-filter: drop-shadow(5px 5px 5px #222);
+    filter: drop-shadow(20px 20px 20px #000);
+}
+#footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px;
+}

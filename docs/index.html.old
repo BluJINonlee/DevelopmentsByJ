@@ -1,0 +1,77 @@
+<html>
+
+<head>
+    <title>_DevelopmentsByJ</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css" />
+
+</head>
+
+<body>
+
+    <div id="underimage"></div>
+    <div id="masthead">
+        <div class="logo">
+            <div class="container-fluid">
+                <div class="row">
+                    <div id="developments" class="col-md-12 input-block-level ">//_DEVELOPMENTS</div>
+                </div>
+                <div id="byj">by j.</div>
+            </div>
+        </div>
+
+        <div class="container skills">
+            <div class="row">
+                <div class="col-xs-2 col-md-2">
+                    <img class="img-responsive" class="shadow" src="img/logos/skill-badges/HTML5.png" alt="HTML 5" title="HTML 5"></img>
+                </div>
+                <div class="col-xs-2 col-md-2">
+                    <img class="img-responsive" src="img/logos/skill-badges/CSS.png" alt="CSS 3" title="CSS 3"></img>
+                </div>
+                <div class="col-xs-2 col-md-2">
+                    <img class="img-responsive" src="img/logos/skill-badges/javascript.png" alt="JavaScript" title="JavaScript"></img>
+                </div>
+                <div class="col-xs-2 col-md-2">
+                    <img class="img-responsive" src="img/logos/skill-badges/sass.png" alt="Sass" title="Sass"></img>
+                </div>
+                <div class="col-xs-2 col-md-2">
+                    <img class="img-responsive" src="img/logos/skill-badges/MySQL.svg.png" alt="MySQL" title="MySQL"></img>
+                </div>
+                <div class="col-xs-2 col-md-2">
+                    <img class="img-responsive" src="img/logos/skill-badges/nodejs.png" alt="NodeJS" title="NodeJS"></img>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ui sticky massive attached bottom menu">
+        <div class="ui container">
+            <span href="#" class="ui inverse right item">DBJ</span>
+            <a href="#" class="ui right item">Where I've Been</a>
+            <a href="#" class="ui right item">Where I'm going</a>
+            <a href="#" class="ui right item">What I've learned along the way</a>
+
+        </div>
+    </div>
+
+
+        <!--Scripts -->
+        <script src="https://code.jquery.com/jquery-3.0.0.min.js" integrity="sha256-JmvOoLtYsmqlsWxa7mDSLMwa6dZ9rrIdtrrVYRnDRH0=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+
+        <script>
+            $("document").ready(function() {
+                $(".logo").animate({
+                        top -= "50px"
+                    },
+                    300
+                );
+            })
+        </script>
+
+</body>
+
+</html>
