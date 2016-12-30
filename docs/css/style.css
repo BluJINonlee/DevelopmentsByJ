@@ -22,8 +22,8 @@
     align-items: center;
     height: 100%;
     width: 100%;
-    background-image: url("../img/IDE-blurred.gif");
-    background-size: cover;
+    /*background-image: url("../img/IDE-blurred.gif");
+    background-size: cover;*/
     /*background-color: #101018*/
 }
 #masthead .logo {
@@ -35,8 +35,9 @@
     font-family: FARRAY;
     font-size: 9vw;
     color: #fff;
-    -webkit-filter: drop-shadow(20px 20px #000);
-    filter: drop-shadow(20px 20px #000);
+    text-shadow: 0px 0px #000;
+
+
 }
 #byj {
     visibility: hidden;
@@ -55,6 +56,11 @@
 
 #scroll-down, #scroll-arrow {
     visibility: hidden;
+}
+
+.title-text {
+    text-shadow: 20px 20px #000 !important;
+    transition:text-shadow 1.5s ease-in-out;
 }
 .logo-inverse {
     font-family: FARRAY;

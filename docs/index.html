@@ -89,7 +89,11 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.js"></script>
+    <script src="js\parallax.js"></script>
     <script type="text/javascript">
+
+    $('#masthead').parallax({imageSrc: 'img/IDE-blurred.gif'});
+
         // enables tabs to work appropriately
         $('.menu .item').tab();
 
@@ -98,9 +102,9 @@
             $('#developments').transition({
                 animation: 'fade',
                 duration: '2000ms'
-            }).animate({
-                dropShadow: "100px 100px #000"
-            });
+            })
+
+            $('#developments').toggleClass("title-text");
 
             $('#byj').transition({
                 animation: 'fade up',
