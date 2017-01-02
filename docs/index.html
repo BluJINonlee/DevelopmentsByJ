@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Tabs and Sticky Sections</title>
+    <title>_DevelopmentsByJ</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.css" />
     <link rel="stylesheet" href="http://s.mlcdn.co/animate.css">
@@ -91,8 +91,9 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.js"></script>
     <script src="js\parallax.js"></script>
     <script type="text/javascript">
-
-    $('#masthead').parallax({imageSrc: 'img/IDE-blurred.gif'});
+        $('#masthead').parallax({
+            imageSrc: 'img/IDE-blurred.gif'
+        });
 
         // enables tabs to work appropriately
         $('.menu .item').tab();
@@ -127,6 +128,16 @@
                 transition: 'fade in',
                 duration: 1000
             });
+
+        $('#resume').visibility({
+            once: true,
+            onTopVisible: function() {
+                $('#resume').transition({
+                     transition:'slide up',
+                    duration: '1s'
+                });
+            }
+        });
 
 
         // enables smooth scroll for all self-links (ie href = "#id")
